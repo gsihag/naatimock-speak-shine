@@ -58,3 +58,5 @@ import { SuccessPage } from '@/pages/SuccessPage';
 );
 
 export default App;
+
+)
