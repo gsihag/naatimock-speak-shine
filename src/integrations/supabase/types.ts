@@ -14,10 +14,116 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      stripe_orders: {
+        Row: {
+          amount_total: number
+          created_at: string
+          currency: string
+          id: string
+          payment_status: string
+          price_id: string
+          stripe_customer_id: string
+          stripe_session_id: string
+          user_id: string
+        }
+        Insert: {
+          amount_total: number
+          created_at?: string
+          currency: string
+          id?: string
+          payment_status: string
+          price_id: string
+          stripe_customer_id: string
+          stripe_session_id: string
+          user_id: string
+        }
+        Update: {
+          amount_total?: number
+          created_at?: string
+          currency?: string
+          id?: string
+          payment_status?: string
+          price_id?: string
+          stripe_customer_id?: string
+          stripe_session_id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      stripe_subscriptions: {
+        Row: {
+          cancel_at_period_end: boolean | null
+          created_at: string
+          current_period_end: number | null
+          current_period_start: number | null
+          id: string
+          payment_method_brand: string | null
+          payment_method_last4: string | null
+          price_id: string | null
+          stripe_customer_id: string
+          stripe_subscription_id: string | null
+          subscription_status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          cancel_at_period_end?: boolean | null
+          created_at?: string
+          current_period_end?: number | null
+          current_period_start?: number | null
+          id?: string
+          payment_method_brand?: string | null
+          payment_method_last4?: string | null
+          price_id?: string | null
+          stripe_customer_id: string
+          stripe_subscription_id?: string | null
+          subscription_status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          cancel_at_period_end?: boolean | null
+          created_at?: string
+          current_period_end?: number | null
+          current_period_start?: number | null
+          id?: string
+          payment_method_brand?: string | null
+          payment_method_last4?: string | null
+          price_id?: string | null
+          stripe_customer_id?: string
+          stripe_subscription_id?: string | null
+          subscription_status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
-      [_ in never]: never
+      stripe_user_subscriptions: {
+        Row: {
+          cancel_at_period_end: boolean | null
+          current_period_end: number | null
+          price_id: string | null
+          subscription_status: string | null
+          user_id: string | null
+        }
+        Insert: {
+          cancel_at_period_end?: boolean | null
+          current_period_end?: number | null
+          price_id?: string | null
+          subscription_status?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          cancel_at_period_end?: boolean | null
+          current_period_end?: number | null
+          price_id?: string | null
+          subscription_status?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       [_ in never]: never
