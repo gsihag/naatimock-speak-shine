@@ -21,7 +21,7 @@ export function SubscriptionStatus() {
 
   const fetchSubscription = async () => {
     try {
-      const { data, error } = await supabase
+      const { data, error } = await (supabase as any)
         .from('stripe_user_subscriptions')
         .select('subscription_status, price_id, current_period_end, cancel_at_period_end')
         .maybeSingle();
@@ -37,7 +37,6 @@ export function SubscriptionStatus() {
       setLoading(false);
     }
   };
-
   if (loading) {
     return (
       <Card>
