@@ -1,4 +1,4 @@
-import { supabase } from '@/integrations/supabase/client';
+import { supabase } from '@/lib/client';
 
 interface CreateCheckoutSessionParams {
   priceId: string;
@@ -19,7 +19,7 @@ export async function createCheckoutSession({
     throw new Error('No authentication token available');
   }
 
-  const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/stripe-checkout`;
+  const apiUrl = `${(import.meta as any)?.env?.VITE_SUPABASE_URL || 'https://xgnojdjxtqywltlxjupd.supabase.co'}/functions/v1/stripe-checkout`;
 
   const response = await fetch(apiUrl, {
     method: 'POST',
