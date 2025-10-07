@@ -109,10 +109,9 @@ const Index = () => {
                 2
               </div>
               <div>
-                <h3 className="text-2xl font-semibold mb-2 text-foreground">Buy Your Mock Test</h3>
+                <h3 className="text-2xl font-semibold mb-2 text-foreground">Pay for Your Mock Test</h3>
                 <p className="text-muted-foreground">
-                  Choose from our flexible pricing: 1 mock test for A$4, 5 tests for A$18, or 10 tests for A$30. 
-                  Then listen to dialogue segments and interpret between English and your chosen language in real-time.
+                  Choose from our flexible pricing: 1 mock test for A$4, 5 tests for A$18, or 10 tests for A$30.
                 </p>
               </div>
             </div>
@@ -120,6 +119,18 @@ const Index = () => {
             <div className="flex gap-6 items-start">
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl">
                 3
+              </div>
+              <div>
+                <h3 className="text-2xl font-semibold mb-2 text-foreground">Give Mock Test</h3>
+                <p className="text-muted-foreground">
+                  Listen to dialogue segments and interpret between English and your chosen language in real-time with 30-second response windows.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-6 items-start">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl">
+                4
               </div>
               <div>
                 <h3 className="text-2xl font-semibold mb-2 text-foreground">Get Detailed Feedback</h3>
